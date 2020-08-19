@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 143: u'define' is not a keyword argument or valid child for the frame statement.
-    define testing:
-          ^
+File "game/script.rpy", line 51: expected statement.
+    player.change_morale(-1)
+                            ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed May 27 17:12:05 2020
+Wed Jun 24 21:32:45 2020

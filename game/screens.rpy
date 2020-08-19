@@ -139,7 +139,22 @@ screen say(who, what):
         xsize gui.stats_width
         ypos gui.stats_ypos
         ysize gui.stats_height
-        text "stats screen"
+        vbox:
+            spacing 10
+            vbox:
+                text "[player.name]"
+            vbox:
+                text "Flair: [player.stats[flair]]"
+                text "Focus: [player.stats[focus]]"
+                text "Force: [player.stats[force]]"
+                text "Guile: [player.stats[guile]]"
+                text "Haste: [player.stats[haste]]"
+                text "Smart: [player.stats[smart]]"
+            vbox:
+                text "Morale: [player.morale[morale]]"
+                bar value StaticValue(player.morale['morale'], 5) xsize 150
+            vbox:
+                text "XP: [player.experience[experience]] [player.experience[levelUp]]"
 
     frame:
         #style "dice_box"
@@ -147,7 +162,12 @@ screen say(who, what):
         xsize gui.dice_width
         ypos gui.dice_ypos
         ysize gui.dice_height
-        text "dice box"
+        hbox:
+            spacing 50
+            xpos 0.3
+            ypos 0.4
+            text "[dicebox.dice1]"
+            text "[dicebox.dice2]"
 
     window:
         id "window"

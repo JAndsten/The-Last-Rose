@@ -1,83 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script
-    e "You've created a new Ren'Py game."
-  File "game/script.rpy", line 27, in script
-    e "You've created a new Ren'Py game."
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "game/screens.rpy", line 121, in execute
-    screen say(who, what):
-  File "game/screens.rpy", line 121, in execute
-    screen say(who, what):
-  File "game/screens.rpy", line 140, in execute
-    frame:
-  File "game/screens.rpy", line 146, in execute
-    text "stats screen" + stats_test['test']
-NameError: name 'stats_test' is not defined
+  File "game/script.rpy", line 51, in script
+    $ player.change_morale(-1)
+  File "game/script.rpy", line 51, in <module>
+    $ player.change_morale(-1)
+  File "game/scripts/stats.rpy", line 44, in change_morale
+    self.morale[morale] = self.morale[morale] + modifier
+NameError: global name 'morale' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "E:\Renpy 7.3.5\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "E:\Renpy 7.3.5\renpy\main.py", line 578, in main
-    run(restart)
-  File "E:\Renpy 7.3.5\renpy\main.py", line 143, in run
-    renpy.execution.run_context(True)
-  File "E:\Renpy 7.3.5\renpy\execution.py", line 908, in run_context
-    context.run()
-  File "game/script.rpy", line 27, in script
-    e "You've created a new Ren'Py game."
-  File "game/script.rpy", line 27, in script
-    e "You've created a new Ren'Py game."
-  File "E:\Renpy 7.3.5\renpy\ast.py", line 671, in execute
-    statement_name("say")
-  File "E:\Renpy 7.3.5\renpy\ast.py", line 45, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "E:\Renpy 7.3.5\renpy\exports.py", line 1601, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 2251, in do_with
-    clear=clear)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 3094, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "E:\Renpy 7.3.5\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "E:\Renpy 7.3.5\renpy\display\core.py", line 3094, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "E:\Renpy 7.3.5\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "E:\Renpy 7.3.5\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 121, in execute
-    screen say(who, what):
-  File "game/screens.rpy", line 121, in execute
-    screen say(who, what):
-  File "game/screens.rpy", line 140, in execute
-    frame:
-  File "game/screens.rpy", line 146, in execute
-    text "stats screen" + stats_test['test']
-  File "<screen language>", line 146, in <module>
-NameError: name 'stats_test' is not defined
+  File "game/script.rpy", line 51, in script
+    $ player.change_morale(-1)
+  File "C:\Renpy\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Renpy\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 51, in <module>
+    $ player.change_morale(-1)
+  File "game/scripts/stats.rpy", line 44, in change_morale
+    self.morale[morale] = self.morale[morale] + modifier
+NameError: global name 'morale' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 The Last Rose 1.0
-Wed May 27 17:12:55 2020
+Wed Jun 24 21:33:11 2020
