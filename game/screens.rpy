@@ -155,6 +155,10 @@ screen say(who, what):
                 bar value StaticValue(player.morale['morale'], 5) xsize 150
             vbox:
                 text "XP: [player.experience[experience]] [player.experience[levelUp]]"
+            vbox:
+                text "Inventory"
+                for item in player.inventory:
+                    text "[item.name]"
 
     frame:
         #style "dice_box"

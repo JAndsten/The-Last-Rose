@@ -36,19 +36,25 @@ label start:
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
-    $ test_choice = player.skillCheck('easy', 'flair', 'fencing')
+    e "Time to test inventory addition."
 
-    e "You rolled a [test_choice]!"
+    $ player.addItem(noble_sword)
+    $ player.addItem(coins)
 
-    e "You have [player.experience[experience]] experience points!"
+    e "Your item bonus for Fencing is [player.itemBonus[fencing]]"
 
-    e "Here comes a heroic check!"
+    e "Time to check item recognition."
 
-    $ heroic_check = player.skillCheck('heroic', 'focus', 'alchemy')
+    $ sword_exists = player.checkItem('noble_sword')
 
-    e "You rolled a [heroic_check]!"
+    e "The sword existing is [sword_exists]."
 
-    $ player.change_morale(-1)
+    e "Next up, we remove items."
+
+    $ player.removeItem(noble_sword)
+    $ sword_exists = player.checkItem('noble_sword')
+
+    e "The sword existing is [sword_exists]."
 
     e "This is just to check rollback."
 

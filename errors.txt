@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: expected statement.
-    player.change_morale(-1)
-                            ^
+File "game/screens.rpy", line 159: end of line expected.
+    text: "Inventory"
+          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 24 21:32:45 2020
+Tue Aug 25 13:34:35 2020

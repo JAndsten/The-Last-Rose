@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 51, in script
-    $ player.change_morale(-1)
-  File "game/script.rpy", line 51, in <module>
-    $ player.change_morale(-1)
-  File "game/scripts/stats.rpy", line 44, in change_morale
-    self.morale[morale] = self.morale[morale] + modifier
-NameError: global name 'morale' is not defined
+  File "game/script.rpy", line 43, in script
+    $ player.addItem(coins)
+  File "game/script.rpy", line 43, in <module>
+    $ player.addItem(coins)
+  File "game/scripts/stats.rpy", line 116, in addItem
+    if self.itemBonus[item.ability] != '':
+KeyError: u''
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 51, in script
-    $ player.change_morale(-1)
-  File "C:\Renpy\renpy\ast.py", line 914, in execute
+  File "game/script.rpy", line 43, in script
+    $ player.addItem(coins)
+  File "E:\Renpy 7.3.5\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Renpy\renpy\python.py", line 2028, in py_exec_bytecode
+  File "E:\Renpy 7.3.5\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 51, in <module>
-    $ player.change_morale(-1)
-  File "game/scripts/stats.rpy", line 44, in change_morale
-    self.morale[morale] = self.morale[morale] + modifier
-NameError: global name 'morale' is not defined
+  File "game/script.rpy", line 43, in <module>
+    $ player.addItem(coins)
+  File "game/scripts/stats.rpy", line 116, in addItem
+    if self.itemBonus[item.ability] != '':
+KeyError: u''
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 The Last Rose 1.0
-Wed Jun 24 21:33:11 2020
+Tue Aug 25 13:25:07 2020
